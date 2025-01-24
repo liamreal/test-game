@@ -1,0 +1,22 @@
+package io.github.liamfromgithubreal.testgame.display;
+
+import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.utils.ScreenUtils;
+
+public class Display {
+
+    OrthographicCamera camera = new OrthographicCamera();
+
+    public Display() {
+
+        camera.setToOrtho(false, 800, 480);
+    }
+
+    public void clear() {
+        ScreenUtils.clear(0f, 0f, 0.2f, 1f);
+    }
+
+    public OrthographicCamera getCamera() {
+        return camera;
+    }
+}

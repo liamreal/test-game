@@ -1,4 +1,4 @@
-package io.github.liamfromgithubreal.testgame;
+package io.github.liamfromgithubreal.testgame.objects;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
