@@ -51,7 +51,7 @@ public class Main extends ApplicationAdapter {
     @Override
     public void render() {
         display.clear();
-        game.input(player, display, world);
+        player.move(world);
         batch.spawn(player, audio);
         display.getCamera().update();
         batch.cycle(player, display.getCamera());
