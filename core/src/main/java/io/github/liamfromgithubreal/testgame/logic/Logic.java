@@ -2,9 +2,9 @@ package io.github.liamfromgithubreal.testgame.logic;
 
 
 // will handle game loops such as input and calculating interactions between different objects
-public class GameLogic {
+public class Logic {
 
-    public GameLogic() {
+    public Logic() {
 
     }
 

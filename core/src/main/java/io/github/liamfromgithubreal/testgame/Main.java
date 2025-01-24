@@ -4,7 +4,7 @@ import com.badlogic.gdx.ApplicationAdapter;
 
 
 import io.github.liamfromgithubreal.testgame.display.Display;
-import io.github.liamfromgithubreal.testgame.logic.GameLogic;
+import io.github.liamfromgithubreal.testgame.logic.Logic;
 import io.github.liamfromgithubreal.testgame.objects.Audio;
 import io.github.liamfromgithubreal.testgame.objects.Batch;
 import io.github.liamfromgithubreal.testgame.objects.Player;
@@ -17,7 +17,7 @@ import java.util.Random;
 public class Main extends ApplicationAdapter {
     // Instance of the random class
     public static Random rand = new Random();
-    GameLogic game;
+    Logic game;
     Player player;
     Audio audio;
     Batch batch;
@@ -29,7 +29,7 @@ public class Main extends ApplicationAdapter {
         player = new Player();
         audio = new Audio();
         display = new Display();
-        game = new GameLogic();
+        game = new Logic();
         batch = new Batch();
         world = new World();
     }
