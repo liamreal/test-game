@@ -1,4 +1,4 @@
-package io.github.liamfromgithubreal.testgame.objects;
+package io.github.liamfromgithubreal.testgame.presentation;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Music;
