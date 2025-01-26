@@ -9,6 +9,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.TimeUtils;
+import io.github.liamfromgithubreal.testgame.application.Global;
 import io.github.liamfromgithubreal.testgame.application.Randomiser;
 import io.github.liamfromgithubreal.testgame.logic.Game;
 
@@ -66,8 +67,8 @@ public class Batch {
     }
     private void spawnRaindrop() {
         Rectangle raindrop = new Rectangle();
-        raindrop.x = MathUtils.random(0, 800-64);
-        raindrop.y = 480;
+        raindrop.x = MathUtils.random(0, Global.HORIZONTAL_RESOLUTION-64);
+        raindrop.y = Global.VERTICAL_RESOLUTION;
         raindrop.width = 64;
         raindrop.height = 64;
         raindrops.add(raindrop);

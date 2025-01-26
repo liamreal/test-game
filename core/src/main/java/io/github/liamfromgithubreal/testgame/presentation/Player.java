@@ -2,6 +2,7 @@ package io.github.liamfromgithubreal.testgame.presentation;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Rectangle;
+import io.github.liamfromgithubreal.testgame.application.Global;
 
 public class Player {
     Rectangle hitbox;
@@ -11,7 +12,7 @@ public class Player {
     public Player() {
         sprite = new Texture(Gdx.files.internal("sprites/bucket/bucket.png"));
         hitbox = new Rectangle();
-        hitbox.x = 800 / 2 - 64 / 2;
+        hitbox.x = Global.HORIZONTAL_RESOLUTION / 2 - 64 / 2;
         hitbox.y = 20;
         hitbox.width = 64;
         hitbox.height = 64;
@@ -45,7 +46,7 @@ public class Player {
     }
     public void borderCheck() {
         if(getHitbox().x < 0) getHitbox().x = 0;
-        if(getHitbox().x > 800 - 64) getHitbox().x = 800 - 64;
+        if(getHitbox().x > Global.HORIZONTAL_RESOLUTION - 64) getHitbox().x = Global.HORIZONTAL_RESOLUTION - 64;
     }
 
 

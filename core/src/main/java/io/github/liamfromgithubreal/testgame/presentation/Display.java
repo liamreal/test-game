@@ -2,11 +2,12 @@ package io.github.liamfromgithubreal.testgame.presentation;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.utils.ScreenUtils;
+import io.github.liamfromgithubreal.testgame.application.Global;
 
 public class Display {
     OrthographicCamera camera = new OrthographicCamera();
     public Display() {
-        camera.setToOrtho(false, 800, 480);
+        camera.setToOrtho(false, Global.HORIZONTAL_RESOLUTION, Global.VERTICAL_RESOLUTION);
     }
     public void update() {
         clear();

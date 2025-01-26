@@ -3,6 +3,7 @@ package io.github.liamfromgithubreal.testgame.lwjgl3;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
 import io.github.liamfromgithubreal.testgame.Main;
+import io.github.liamfromgithubreal.testgame.application.Global;
 
 /** Launches the desktop (LWJGL3) application. */
 public class Lwjgl3Launcher {
@@ -39,7 +40,7 @@ public class Lwjgl3Launcher {
 //        configuration.setWindowedMode(dm.width, dm.height);
 
 
-        configuration.setWindowedMode(800, 640);
+        configuration.setWindowedMode(Global.HORIZONTAL_RESOLUTION, Global.VERTICAL_RESOLUTION);
 
         configuration.setWindowIcon("libgdx128.png", "libgdx64.png", "libgdx32.png", "libgdx16.png");
 
