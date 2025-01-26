@@ -10,8 +10,6 @@ import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.TimeUtils;
 import io.github.liamfromgithubreal.testgame.application.Global;
-import io.github.liamfromgithubreal.testgame.application.Randomiser;
-import io.github.liamfromgithubreal.testgame.logic.Game;
 
 import java.util.Iterator;
 
@@ -56,7 +54,7 @@ public class Batch {
                 if (player.getJumpSpeed() < 0) player.setJumpSpeed(1500);
                 // this will be used to index the dropSound array for one of 3 possible sounds, so upper bound is 3
                 // (from 0 up to but NOT including 3)
-                int soundIndex = Randomiser.rand.nextInt(3);
+                int soundIndex = Global.RAND.nextInt(3);
                 // play drop sound at random index
                 sounds[soundIndex].play();
                 // remove rain drop as it collided with bucket

@@ -5,7 +5,6 @@ import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.audio.Sound;
 
 public class Audio {
-
     private Sound[] dropSounds = new Sound[3];
     private Music rainMusic;
 
