@@ -9,6 +9,7 @@ public class Display {
     public Display() {
         camera.setToOrtho(false, Global.HORIZONTAL_RESOLUTION, Global.VERTICAL_RESOLUTION);
     }
+    // update screen camera
     public void update() {
         clear();
         getCamera().update();
@@ -16,6 +17,7 @@ public class Display {
     private void clear() {
         ScreenUtils.clear(0f, 0f, 0.2f, 1f);
     }
+    // getters/setters
     public OrthographicCamera getCamera() {
         return camera;
     }

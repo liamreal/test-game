@@ -12,11 +12,10 @@ public class World {
     public World(int gravitySpeed) {
         this.gravitySpeed = gravitySpeed;
     }
-
+    // getters/setters
     public int getGravitySpeed() {
         return gravitySpeed;
     }
-
     public int getGroundHeight() {
         return groundHeight;
     }
