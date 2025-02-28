@@ -35,7 +35,7 @@ public class Lwjgl3Launcher {
         //// useful for testing performance, but can also be very stressful to some hardware.
         //// You may also need to configure GPU drivers to fully disable Vsync; this can cause screen tearing.
 
-//        // automatically sets resolution based on screen size
+//        // automatically sets resolution based on screen size (uses badlogic Graphics class - need to import)
 //        Graphics.DisplayMode dm = Lwjgl3ApplicationConfiguration.getDisplayMode();
 //        configuration.setWindowedMode(dm.width, dm.height);
 

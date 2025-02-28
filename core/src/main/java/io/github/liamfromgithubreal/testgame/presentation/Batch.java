@@ -30,9 +30,9 @@ public class Batch {
         spawnRaindrop();
     }
     // update batch on screen
-    public void update(Player player, Audio audio, Display display) {
+    public void update(Player player, Audio sounds, Display display) {
         spawn();
-        collide(player, audio.getDropSounds());
+        collide(player, sounds.getSounds());
         cycle(player, display.getCamera());
     }
     // cycling through list of raindrops for batch

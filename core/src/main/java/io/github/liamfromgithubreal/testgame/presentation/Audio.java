@@ -9,18 +9,27 @@ import io.github.liamfromgithubreal.testgame.application.Global;
 import java.util.ArrayList;
 
 public class Audio {
-    private ArrayList<Sound> dropSounds = new ArrayList<>();
+    private ArrayList<Sound> sounds = new ArrayList<>();
     private Music rainMusic;
 
-    public Audio() {
-        String dropSoundPath = new String("sounds/drop/drop_#.mp3");
+    public Audio(String soundPath) {
+        // find sounds in file based on inputted sound path
+        findSounds(sounds, soundPath);
+
+        // load ambience music into memory
+        rainMusic = Gdx.audio.newMusic(Gdx.files.internal("sounds/ambience/rain.mp3"));
+        // set playback of music to loop and play immediately
+        rainMusic.setLooping(true);
+        rainMusic.play();
+    }
+    private void findSounds(ArrayList<Sound> sounds, String soundPath) {
         // max sounds an interaction can have
         for (int i = 0; i < Global.MAX_SOUNDS; i++) {
-            String dropSoundPathTemp = dropSoundPath.replace("#", Integer.toString(i + 1));
+            String dropSoundPathTemp = soundPath.replace("#", Integer.toString(i + 1));
             // try adding until no more sound files found
             try {
                 Sound dropSound = Gdx.audio.newSound(Gdx.files.internal(dropSoundPathTemp));
-                dropSounds.add(dropSound);
+                sounds.add(dropSound);
             }
             catch(GdxRuntimeException e) {
                 // log caught error to terminal
@@ -28,19 +37,14 @@ public class Audio {
                 break;
             }
         }
-        // load ambience music into memory
-        rainMusic = Gdx.audio.newMusic(Gdx.files.internal("sounds/ambience/rain.mp3"));
-        // set playback of music to loop and play immediately
-        rainMusic.setLooping(true);
-        rainMusic.play();
     }
     // getters/setters
-    public ArrayList<Sound> getDropSounds() {
-        return dropSounds;
+    public ArrayList<Sound> getSounds() {
+        return sounds;
     }
     // dispose from memory
     public void dispose() {
-        for (Sound s : dropSounds) s.dispose();
+        for (Sound s : sounds) s.dispose();
         rainMusic.dispose();
     }
 }

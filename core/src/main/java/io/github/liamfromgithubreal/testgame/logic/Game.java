@@ -14,13 +14,13 @@ import java.util.Random;
 // will handle game loops such as input and calculating interactions between different objects
 public class Game {
     Player player;
-    Audio audio;
+    Audio dropSoundsAudio;
     Batch batch;
     Display display;
     World world;
     public Game() {
         player = new Player();
-        audio = new Audio();
+        dropSoundsAudio = new Audio(new String("sounds/drop/drop_#.mp3"));
         display = new Display();
         batch = new Batch();
         world = new World();
@@ -29,11 +29,11 @@ public class Game {
         handleInput();
         display.update();
         player.update(world);
-        batch.update(player, audio, display);
+        batch.update(player, dropSoundsAudio, display);
     }
     public void dispose() {
         player.getSprite().dispose();
-        audio.dispose();
+        dropSoundsAudio.dispose();
         batch.dispose();
     }
     private void handleInput() {
